@@ -1,0 +1,122 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem;
+    position:relative;
+    width:95%;
+    height:90px;
+    z-index:1;
+   
+}
+.header-bg{
+    background-color: rgba(0, 0, 0, 0.85);
+    transition:0.5s;
+}
+.nav-menu{
+    display: flex;
+    position: relative;
+}
+.nav-menu li::before{
+    content:" ";
+    width:4rem;
+    height:0.2rem;
+    background: linear-gradient(90deg,#a993fe 0%,#7e61e7 100%);
+    border-radius: 0.5rem;
+    position:absolute;
+    bottom:-4%;
+    opacity:0;
+    transform: translateX(-1.5rem);
+    transition: all 0.3s ease;
+}
+.nav-menu li:hover::before{
+    width:5%;
+    transform: translateX(0);
+    opacity: 1;
+}
+.nav-menu li{
+    padding: 0 1rem;
+    margin-right: 25px;
+} 
+.nav-menu li a{
+    font-size:1.2rem;
+    font-weight:500;
+    
+}
+
+.contact-btn {  
+    margin-right: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: linear-gradient(90deg,#a993fe,#7e61e7 100%);
+    padding:0.6rem 2rem;
+    border: none;
+    outline:1.5px solid transparent;
+    border-radius:0.2rem;
+    border-radius: 0.2rem;
+    cursor:pointer;
+    transition: all 0.3 ease;
+}
+
+.contact-btn:hover{
+    color: #a993fe;
+    background: #000;
+    outline: 1.5px solid #a993fe;
+}
+.hamburger{
+    display:none;
+    margin-right:20px;
+    color: #fff;
+    background: linear-gradient(90deg,#a993fe -0.13%,#7e61e7 99.87%);
+    font-size: 2rem;
+    width:2.5rem;
+    height: 2.5rem;
+    line-height: 0;
+    padding:4px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border-radius: 0.4rem;
+    
+}
+.hamburger:hover{
+    color: #a993fe;
+    background: #000;
+    border:1px solid #a993fe;
+}
+@media screen and (max-width:1040px){
+    .nav-menu{
+        
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width:95%;
+        height:110vh;
+        background: rgba(0,0,0,0.9);
+        position:absolute;
+        top:-10%;
+        right:100%;
+        z-index:-3;
+        transition:0.3s;
+    }
+    .nav-menu.active{
+        
+        left:0;
+    }
+    .nav-menu li{
+        padding:1rem 0;
+    }
+    .nav-menu li a{
+        font-size: 1.5rem;
+    }
+    .hamburger{
+        display:initial;
+        
+    }
+    .contect-btn {
+        margin-top: 30px;
+    }
+}

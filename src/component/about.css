@@ -1,0 +1,94 @@
+.about {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.about-left {
+    width: 65%;
+    height: 100%;
+}
+
+.about-left h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 3rem;
+    margin-left: 2rem;
+    text-align: center;
+}
+
+.about-left .aboutme {
+    width: 90%;
+    margin-left: 2.5rem;
+    margin-right: 1rem;
+}
+
+.about-left .aboutme p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    line-height: 1.5rem;
+}
+
+.about-right {
+    width: 35%;
+    height: 100%;
+    
+}
+
+.about-right  img {
+    
+    height: 500px;
+    width: 330px;
+    border-radius: 10px;
+    margin-left: 10%;
+}
+
+
+.about::after,
+.about::before {
+    content: " ";
+    width: 28.150rem;
+    height: 28.150rem;
+    border-radius: 28.150rem;
+    background: #7c66e3;
+    position: absolute;
+    z-index: -1;
+    margin-left: 1.5rem;
+    filter: blur(225px);
+}
+
+.about::after {
+    top: -3rem;
+    left: -5rem;
+}
+
+.about::before {
+    bottom: 2rem;
+    right: 0rem;
+}
+
+
+
+@media(max-width:768px) {
+    .about-right {
+        display: none;
+    }
+    .about {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .about-left{
+        margin-top: 35px;
+        width: 100%;
+        
+    }
+    .about-left h1 {
+        font-size: 2rem;
+    }
+
+    .about-left .aboutme{
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+    }
+}
